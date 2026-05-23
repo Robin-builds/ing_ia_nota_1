@@ -86,11 +86,11 @@ cp .env
 
 | Columna | Descripción |
 |---------|-------------|
-| `periodo` | Semana o período (ej: `2025-W18`) |
-| `ejecutivo` | Nombre del propietario del contacto |
-| `equipo` | `Grupo Aleatorio` o `Grupo Pro` |
-| `leads_asignados` | Cantidad de leads asignados en el período |
-| `matriculas` | Conteo usando *Date entered "matriculado"* |
+| `periodo`         | Semana o período (ej: `2025-W18`)          |
+| `ejecutivo`       | Nombre del propietario del contacto        |
+| `equipo`          | `Grupo Aleatorio` o `Grupo Pro`            |
+| `leads_asignados` | Cantidad de leads asignados en el período  |
+| `matriculas`      | Conteo usando *Date entered "matriculado"* |
 
 ### Base de conocimiento institucional (recomendado)
 
