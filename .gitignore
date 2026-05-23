@@ -1,0 +1,43 @@
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Data - indexes and processed files (heavy)
+data/faiss_index/
+data/processed/
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code internal
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
