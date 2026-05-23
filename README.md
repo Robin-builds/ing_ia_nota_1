@@ -1,6 +1,6 @@
-# IACC Analytics Assistant
+# IACC Analytics Assistant - 
 **Agente de análisis de gestión comercial con LLM + RAG**  
-Evaluación Parcial N°1 — ISY0101 Ingeniería de Soluciones con IA — DuocUC 2026
+Evaluación Parcial N°1 — ISY0101 Ingeniería de Soluciones con IA — DuocUC 2026 - Robinson Arriagada Borquez
 
 ---
 
@@ -58,21 +58,17 @@ iacc-analytics-assistant/
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/iacc-analytics-assistant.git
-cd iacc-analytics-assistant
+git clone https://github.com/Robin-builds/ing_ia_nota_1.git
 
 # 2. Crear entorno virtual
 python -m venv venv
-source venv/bin/activate      # Linux/Mac
 venv\Scripts\activate         # Windows
 
 # 3. Instalar dependencias
 pip install -r requirements.txt
 
 # 4. Configurar variables de entorno
-cp .env.example .env
-
-
+cp .env
 ---
 
 ## Preparación de datos
@@ -98,8 +94,6 @@ cp .env.example .env
 
 ### Base de conocimiento institucional (recomendado)
 
-Agregar archivos `.md` con definiciones de KPIs, glosario y criterios institucionales en `data/knowledge_base/`.
-
 ---
 
 ## Ejecución
@@ -109,9 +103,6 @@ Agregar archivos `.md` con definiciones de KPIs, glosario y criterios institucio
 ```bash
 python -m src.build_index
 ```
-
-La primera ejecución descarga el modelo de embeddings (~80MB). Las siguientes son instantáneas.
-
 ### Paso 2 — Iniciar el agente
 
 ```bash
@@ -146,10 +137,10 @@ Genera un reporte RAGAS con las métricas de calidad del sistema.
 
 | Métrica | Umbral mínimo | Descripción |
 |---------|--------------|-------------|
-| **Faithfulness** | ≥ 0.85 | El LLM no inventa datos ausentes en el contexto |
-| Context Precision | — | Los chunks recuperados son relevantes |
-| Context Recall | — | Se recuperaron todos los chunks necesarios |
-| Answer Relevancy | — | La respuesta responde la pregunta formulada |
+| **Faithfulness**     | ≥ 0.85 | El LLM no inventa datos ausentes en el contexto |
+| Context Precision    |    —   | Los chunks recuperados son relevantes           |
+| Context Recall       |    —   | Se recuperaron todos los chunks necesarios      |
+| Answer Relevancy     |    —   | La respuesta responde la pregunta formulada     |
 
 ---
 
@@ -157,7 +148,7 @@ Genera un reporte RAGAS con las métricas de calidad del sistema.
 
 Este sistema cumple con la **Ley N° 19.628** sobre Protección de la Vida Privada:
 
-- Los embeddings se generan **100% localmente** (sentence-transformers, sin API)
+- Los embeddings se generan **100% localmente** (sentence-transformers)
 - El índice FAISS se almacena **localmente** (no en servicios cloud)
 - Las consultas al LLM usan **datos agregados y anonimizados**
 - Datos nominales de estudiantes (RUT, nombre, contacto) **nunca se indexan ni transmiten**
@@ -166,6 +157,6 @@ Este sistema cumple con la **Ley N° 19.628** sobre Protección de la Vida Priva
 
 ## Declaración de uso de IA
 
-En el desarrollo de este proyecto se utilizó Claude (Anthropic) como apoyo para estructuración de código y redacción técnica. Todas las decisiones de diseño, reglas de negocio y justificaciones son de autoría propia.
+En el desarrollo de este proyecto se utilizó Claude-code como apoyo para estructuración de código y ayuda a solucionar problemas tecnicos. Todas las decisiones de diseño, reglas de negocio y justificaciones son de autoría propia, como este documento.
 
 Citación: https://bibliotecas.duoc.cl/ia
